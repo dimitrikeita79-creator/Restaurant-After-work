@@ -48,8 +48,8 @@ export function Hero() {
               </Link>
             </div>
 
-            <div className="block lg:hidden mt-8 px-4 sm:px-6">
-              <div className="glass glass-strong relative overflow-hidden rounded-[2rem] h-[180px] w-full sm:h-[220px]">
+            <div className="block lg:hidden mt-4 px-4 sm:px-6">
+              <div className="glass glass-strong relative overflow-hidden rounded-[2rem] h-[260px] w-full sm:h-[320px]">
                 <img
                   src={etablissement2}
                   alt="Ambiance festive au Restaurant After Work"

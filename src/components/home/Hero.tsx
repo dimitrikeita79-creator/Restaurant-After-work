@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section className="relative min-h-[100dvh] overflow-hidden bg-background pt-24">
       <div className="block lg:hidden px-4 pt-6 sm:px-6">
-        <div className="glass glass-strong relative overflow-hidden rounded-[2rem] h-[320px] w-full sm:h-[420px]">
+        <div className="glass glass-strong relative overflow-hidden rounded-[2rem] h-[240px] w-full sm:h-[300px]">
           <img
             src={etablissement2}
             alt="Ambiance festive au Restaurant After Work"

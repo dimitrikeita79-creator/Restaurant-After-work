@@ -52,6 +52,22 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 40, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="relative block lg:hidden"
+        >
+          <div className="glass glass-strong relative overflow-hidden rounded-[2rem] aspect-[4/5] w-full">
+            <img
+              src={etablissement2}
+              alt="Ambiance festive au Restaurant After Work"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: 40, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="relative hidden lg:block"
         >
           <div className="glass glass-strong relative overflow-hidden rounded-[2rem] aspect-[4/5] 2xl:aspect-[5/6]">

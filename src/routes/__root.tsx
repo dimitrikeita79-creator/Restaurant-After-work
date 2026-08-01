@@ -1,29 +1,29 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+} from '@tanstack/react-router';
+import { useEffect, type ReactNode } from 'react';
 
-import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
-import { LenisProvider } from "@/lib/lenis-provider";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { CartDrawer } from "@/components/layout/CartDrawer";
-import { NotFound } from "@/components/NotFound";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { ScrollProgress } from "@/components/ux/ScrollProgress";
-import { ScrollToTop } from "@/components/ux/ScrollToTop";
+import appCss from '../styles.css?url';
+import { reportLovableError } from '../lib/lovable-error-reporting';
+import { LenisProvider } from '@/lib/lenis-provider';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+import { CartDrawer } from '@/components/layout/CartDrawer';
+import { NotFound } from '@/components/NotFound';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
+import { ScrollProgress } from '@/components/ux/ScrollProgress';
+import { ScrollToTop } from '@/components/ux/ScrollToTop';
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
+
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error, { boundary: 'tanstack_root_error_component' });
   }, [error]);
 
   return (
@@ -55,65 +55,65 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#1a0e0e" },
-      { title: "Restaurant After Work — Restauration, karaoké & événements" },
+      { charSet: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'theme-color', content: '#1a0e0e' },
+      { title: 'Restaurant After Work — Restauration, karaoké & événements' },
       {
-        name: "description",
+        name: 'description',
         content:
-          "Restaurant After Work à Ouagadougou. Cuisine soignée, live karaoké, traiteur événementiel. Réservez votre table ou organisez votre événement.",
+          'Restaurant After Work à Ouagadougou. Cuisine soignée, live karaoké, traiteur événementiel. Réservez votre table ou organisez votre événement.',
       },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Restaurant After Work" },
-      { property: "og:title", content: "Restaurant After Work" },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'Restaurant After Work' },
+      { property: 'og:title', content: 'Restaurant After Work' },
       {
-        property: "og:description",
-        content: "Restauration, live karaoké et événements privés à Ouagadougou.",
+        property: 'og:description',
+        content: 'Restauration, live karaoké et événements privés à Ouagadougou.',
       },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: 'stylesheet', href: appCss },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Geist:wght@400;500;600&display=swap",
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Geist:wght@400;500;600&display=swap',
       },
     ],
     scripts: [
       {
-        type: "application/ld+json",
+        type: 'application/ld+json',
         children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Restaurant",
-          name: "Restaurant After Work",
-          servesCuisine: ["African", "Fusion"],
-          telephone: "+22606444464",
+          '@context': 'https://schema.org',
+          '@type': 'Restaurant',
+          name: 'Restaurant After Work',
+          servesCuisine: ['African', 'Fusion'],
+          telephone: '+22606444464',
           address: {
-            "@type": "PostalAddress",
-            addressLocality: "Ouagadougou",
-            addressCountry: "BF",
+            '@type': 'PostalAddress',
+            addressLocality: 'Ouagadougou',
+            addressCountry: 'BF',
           },
           geo: {
-            "@type": "GeoCoordinates",
+            '@type': 'GeoCoordinates',
             latitude: 12.321837,
             longitude: -1.5016749,
           },
-          hasMap: "https://maps.app.goo.gl/5p6c8v1GzuXsVj8s9",
+          hasMap: 'https://maps.app.goo.gl/5p6c8v1GzuXsVj8s9',
           openingHoursSpecification: [
             {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
-              opens: "17:00",
-              closes: "02:00",
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              opens: '17:00',
+              closes: '02:00',
             },
             {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Saturday", "Sunday"],
-              opens: "16:00",
-              closes: "02:00",
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Saturday', 'Sunday'],
+              opens: '16:00',
+              closes: '02:00',
             },
           ],
         }),
@@ -128,15 +128,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
+    <>
+      <HeadContent />
+      {children}
+    </>
   );
 }
 

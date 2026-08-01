@@ -9,8 +9,24 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] overflow-hidden bg-background pt-24">
-
       <div className="mx-auto grid min-h-[calc(100dvh-6rem)] w-full max-w-6xl 2xl:max-w-7xl grid-cols-1 items-end gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-12 lg:pb-24 lg:px-8">
+
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: 40, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="relative block lg:hidden"
+        >
+          <div className="glass glass-strong relative overflow-hidden rounded-[2rem] aspect-[4/5] w-full">
+            <img
+              src={etablissement2}
+              alt="Ambiance festive au Restaurant After Work"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          </div>
+        </motion.div>
+
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,22 +61,6 @@ export function Hero() {
             >
               Voir la carte
             </Link>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 40, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="relative block lg:hidden"
-        >
-          <div className="glass glass-strong relative overflow-hidden rounded-[2rem] aspect-[4/5] w-full">
-            <img
-              src={etablissement2}
-              alt="Ambiance festive au Restaurant After Work"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           </div>
         </motion.div>
 

@@ -9,17 +9,6 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] overflow-hidden bg-background pt-24">
-      <div className="block lg:hidden px-4 pt-6 sm:px-6">
-        <div className="glass glass-strong relative overflow-hidden rounded-[2rem] h-[240px] w-full sm:h-[300px]">
-          <img
-            src={etablissement2}
-            alt="Ambiance festive au Restaurant After Work"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-        </div>
-      </div>
-
       <div className="mt-8 lg:mt-0">
         <div className="mx-auto grid min-h-[calc(100dvh-6rem)] w-full max-w-6xl 2xl:max-w-7xl grid-cols-1 items-end gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-12 lg:pb-24 lg:px-8">
 
@@ -57,6 +46,17 @@ export function Hero() {
               >
                 Voir la carte
               </Link>
+            </div>
+
+            <div className="block lg:hidden mt-8 px-4 sm:px-6">
+              <div className="glass glass-strong relative overflow-hidden rounded-[2rem] h-[180px] w-full sm:h-[220px]">
+                <img
+                  src={etablissement2}
+                  alt="Ambiance festive au Restaurant After Work"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              </div>
             </div>
           </motion.div>
 

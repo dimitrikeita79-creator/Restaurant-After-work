@@ -54,7 +54,7 @@ function ImageBand() {
           <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-10">
             <p className="text-xs uppercase tracking-[0.22em] text-white/70">La table</p>
             <h2 className="mt-2 max-w-2xl font-display text-3xl leading-[1.05] sm:text-4xl md:text-5xl">
-              Espace calme , palisirs partagés.
+              Espace calme , plaisirs partagés.
             </h2>
           </div>
         </motion.div>

@@ -38,6 +38,14 @@ const actions = [
     bg: "bg-accent",
     fg: "text-accent-foreground",
   },
+  {
+    title: "WhatsApp",
+    value: "+226 56 15 34 44",
+    href: "https://wa.me/22656153444",
+    Icon: WhatsAppIcon,
+    bg: "bg-accent",
+    fg: "text-accent-foreground",
+  },
 ];
 
 function ContactPage() {

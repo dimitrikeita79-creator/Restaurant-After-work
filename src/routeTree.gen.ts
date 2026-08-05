@@ -14,6 +14,8 @@ import { Route as CatalogueRouteImport } from './routes/catalogue'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as ReservationRouteImport } from './routes/reservation'
+import { Route as LiveRouteImport } from './routes/live'
+import { Route as EvenementRouteImport } from './routes/evenement'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +43,16 @@ const ReservationRoute = ReservationRouteImport.update({
   path: '/reservation',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LiveRoute = LiveRouteImport.update({
+  id: '/live',
+  path: '/live',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementRoute = EvenementRouteImport.update({
+  id: '/evenement',
+  path: '/evenement',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -53,6 +65,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/menu': typeof MenuRoute
   '/reservation': typeof ReservationRoute
+  '/live': typeof LiveRoute
+  '/evenement': typeof EvenementRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +75,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/menu': typeof MenuRoute
   '/reservation': typeof ReservationRoute
+  '/live': typeof LiveRoute
+  '/evenement': typeof EvenementRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
@@ -70,15 +86,17 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/menu': typeof MenuRoute
   '/reservation': typeof ReservationRoute
+  '/live': typeof LiveRoute
+  '/evenement': typeof EvenementRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/catalogue' | '/contact' | '/menu' | '/reservation' | '/sitemap.xml'
+    '/' | '/catalogue' | '/contact' | '/menu' | '/reservation' | '/live' | '/evenement' | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/catalogue' | '/contact' | '/menu' | '/reservation' | '/sitemap.xml'
+    '/' | '/catalogue' | '/contact' | '/menu' | '/reservation' | '/live' | '/evenement' | '/sitemap.xml'
   id:
     | '__root__'
     | '/'
@@ -135,6 +153,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReservationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/live': {
+      id: '/live'
+      path: '/live'
+      fullPath: '/live'
+      preLoaderRoute: typeof LiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenement': {
+      id: '/evenement'
+      path: '/evenement'
+      fullPath: '/evenement'
+      preLoaderRoute: typeof EvenementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -151,6 +183,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   MenuRoute: MenuRoute,
   ReservationRoute: ReservationRoute,
+  LiveRoute: LiveRoute,
+  EvenementRoute: EvenementRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport

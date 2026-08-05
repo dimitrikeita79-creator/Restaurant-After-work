@@ -11,6 +11,8 @@ const links = [
   { to: "/", label: "Accueil" },
   { to: "/catalogue", label: "Catalogue" },
   { to: "/menu", label: "Menu" },
+  { to: "/live", label: "Live" },
+  { to: "/evenement", label: "Événements" },
   { to: "/reservation", label: "Réservation" },
   { to: "/contact", label: "Contact" },
 ] as const;

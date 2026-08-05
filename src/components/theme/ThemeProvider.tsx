@@ -7,14 +7,14 @@ const ThemeContext = createContext<Ctx | null>(null);
 const KEY = "aw-theme";
 
 function getInitial(): Theme {
-  if (typeof window === "undefined") return "dark";
+  if (typeof window === "undefined") return "light";
   const stored = localStorage.getItem(KEY) as Theme | null;
   if (stored === "light" || stored === "dark") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return "light";
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const t = getInitial();

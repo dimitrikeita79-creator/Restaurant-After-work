@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/home/Hero";
 import { Highlights } from "@/components/home/Highlights";
+import { LiveEventPreview } from "@/components/home/LiveEventPreview";
 import { Gallery } from "@/components/home/Gallery";
 import { motion } from "motion/react";
 import etablissement10 from "@/assets/afterwork/Etablissement (10).jpeg";
@@ -27,6 +28,7 @@ function HomePage() {
     <>
       <Hero />
       <Highlights />
+      <LiveEventPreview />
       <ImageBand />
       <Gallery />
     </>

@@ -2,17 +2,28 @@ import { motion } from "motion/react";
 import { useState, useCallback } from "react";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { ImagePreview } from "@/components/ux/ImagePreview";
+import etablissement1 from "@/assets/afterwork/Etablissement (1).jpeg";
+import etablissement2 from "@/assets/afterwork/Etablissement (2).jpeg";
+import etablissement3 from "@/assets/afterwork/Etablissement (3).jpeg";
 import etablissement5 from "@/assets/afterwork/Etablissement (5).jpeg";
 import etablissement6 from "@/assets/afterwork/Etablissement (6).jpeg";
 import etablissement7 from "@/assets/afterwork/Etablissement (7).jpeg";
 import etablissement8 from "@/assets/afterwork/Etablissement (8).jpeg";
 import etablissement9 from "@/assets/afterwork/Etablissement (9).jpeg";
+import etablissement11 from "@/assets/After work/Etablissement/Etablissement 11.jpeg";
+import etablissement12 from "@/assets/After work/Etablissement/Etablissement 12.jpeg";
 
 const shots = [
-  { src: etablissement9, alt: "Façade lumineuse After Work la nuit", pos: "object-center" },
-  { src: etablissement6, alt: "Terrasse à l'heure bleue", pos: "object-center" },
-  { src: etablissement7, alt: "Notre chef au buffet événementiel", pos: "object-[center_35%]" },
+  { src: etablissement1, alt: "Entrée de l'établissement After Work", pos: "object-center" },
+  { src: etablissement2, alt: "Ambiance festive du restaurant", pos: "object-center" },
+  { src: etablissement3, alt: "Salle accueillante et décoration chaleureuse", pos: "object-center" },
+  { src: etablissement5, alt: "Terrasse After Work avec installation extérieure", pos: "object-center" },
+  { src: etablissement6, alt: "Tables et service dans l'établissement", pos: "object-center" },
+  { src: etablissement7, alt: "Décoration d'un événement privé", pos: "object-[center_35%]" },
   { src: etablissement8, alt: "Ambiance de soirée sur écran géant", pos: "object-center" },
+  { src: etablissement9, alt: "Façade lumineuse After Work la nuit", pos: "object-center" },
+  { src: etablissement11, alt: "Intérieur cosy et bar After Work", pos: "object-center" },
+  { src: etablissement12, alt: "Table dressée pour un événement privé", pos: "object-center" },
 ];
 
 const allImages = shots.map((s) => s.src);
@@ -40,7 +51,7 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 xl:grid-cols-6">
           {shots.map((s, i) => (
             <motion.button
               key={s.src}
@@ -48,21 +59,17 @@ export function Gallery() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.7, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="glass group relative overflow-hidden rounded-2xl sm:rounded-3xl aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5]"
+              transition={{ duration: 0.7, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm transition hover:shadow-lg sm:aspect-4/5 md:aspect-3/4"
               aria-label="Agrandir l'image"
             >
               <img
                 src={s.src}
                 alt={s.alt}
                 loading="lazy"
-                className={`absolute inset-0 h-full w-full object-cover ${s.pos} transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]`}
+                className={`h-full w-full object-cover ${s.pos} transition-transform duration-700 ease-out group-hover:scale-[1.08]`}
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-colors duration-300 group-hover:bg-black/15">
-                <span className="scale-0 rounded-full bg-white/20 p-2.5 backdrop-blur transition-transform duration-300 group-hover:scale-100">
-                  <MagnifyingGlass size={18} weight="bold" className="text-white" />
-                </span>
-              </div>
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </motion.button>
           ))}
         </div>

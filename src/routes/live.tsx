@@ -40,7 +40,7 @@ function LivePage() {
           </p>
         </motion.header>
 
-        <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ function LivePage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="glass rounded-[2rem] overflow-hidden"
           >
-            <img src={liveImage} alt="Live After Work" className="h-full min-h-[320px] w-full object-cover" />
+            <img src={liveImage} alt="Live After Work" className="h-full min-h-[280px] w-full object-cover" />
           </motion.div>
 
           <motion.div
@@ -56,42 +56,47 @@ function LivePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="glass rounded-[2rem] p-8"
+            className="glass rounded-[2rem] bg-slate-950/95 p-6 shadow-xl shadow-slate-950/15"
           >
-            <div className="space-y-5">
+            <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-semibold text-white">Infos pratiques</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Vendredi live coupé décalé, rétro, zouglou ou reggae.
-                  Programmation à partir de 16h avec service bar et restauration sur place.
+                <h2 className="text-3xl font-semibold text-black">Infos pratiques</h2>
+                <p className="mt-3 text-sm leading-relaxed text-black-100">
+                  Vendredi live coupé décalé, rétro, zouglou et reggae. Service bar et restauration sur place dès 16h.
                 </p>
               </div>
 
-              <div className="grid gap-4 text-sm text-muted-foreground sm:grid-cols-2">
-                <div className="rounded-3xl border border-white/10 p-5">
-                  <p className="font-semibold text-white">Horaires</p>
-                  <p className="mt-3">Mardi – Jeudi : dès 17h</p>
-                  <p>Vendredi – Dimanche : dès 16h</p>
+              <div className="grid gap-3 text-sm sm:grid-cols-2">
+                <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
+                  <p className="text-sm font-semibold text-white">Horaires</p>
+                  <p className="mt-3 text-slate-100">Mardi – Jeudi : dès 17h</p>
+                  <p className="text-slate-100">Vendredi – Dimanche : dès 16h</p>
                 </div>
-                <div className="rounded-3xl border border-white/10 p-5">
-                  <p className="font-semibold text-white">Contact</p>
-                  <p className="mt-3">WhatsApp : +226 65 43 85 85</p>
-                  <p>WhatsApp : +226 56 15 34 44</p>
+                <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
+                  <p className="text-sm font-semibold text-white">Contact</p>
+                  <p className="mt-3 text-slate-100">WhatsApp : +226 65 43 85 85</p>
+                  <p className="text-slate-100">WhatsApp : +226 56 15 34 44</p>
                 </div>
               </div>
 
-              <div className="rounded-3xl border border-white/10 p-5">
-                <p className="font-semibold text-white">Ambiance</p>
-                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                  <li>• Animation live et DJ présents.</li>
-                  <li>• Terrasse musicale et écrans géants pour les grands matchs.</li>
-                  <li>• Cocktails, bières et plats à partager.</li>
-                </ul>
+              <div className="grid gap-3 text-sm sm:grid-cols-2">
+                <div className="rounded-xl border border-red/10 bg-white/5 p-4">
+                  <p className="text-sm font-semibold text-black">Ambiance</p>
+                  <ul className="mt-3 space-y-2 text-black-300">
+                    <li>Animation live et DJ.</li>
+                    <li>Terrasse musicale et écran géant.</li>
+                    <li>Cocktails, bières et plats à partager.</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-red/10 bg-white/5 p-4">
+                  <p className="text-sm font-semibold text-black">Conseil</p>
+                  <p className="mt-3 text-black-300">Réservez votre table en avance pour profiter d’une place face à la scène.</p>
+                </div>
               </div>
 
               <Link
                 to="/reservation"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-95"
+                className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-95 sm:w-auto"
               >
                 Réserver une table
               </Link>

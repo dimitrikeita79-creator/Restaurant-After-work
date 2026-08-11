@@ -43,7 +43,7 @@ export function CartDrawer() {
       .map((l) => `- ${l.name} x${l.qty}`)
       .join("\n")}`,
   );
-  const waUrl = `https://wa.me/22665438585?text=${orderMessage}`;
+  const waUrl = `https://wa.me/22666292951?text=${orderMessage}`;
 
   const tree = (
     <AnimatePresence>

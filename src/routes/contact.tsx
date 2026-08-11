@@ -32,8 +32,8 @@ const actions = [
   },
   {
     title: "WhatsApp",
-    value: "+226 65 43 85 85",
-    href: "https://wa.me/22665438585",
+    value: "+226 66 29 29 51",
+    href: "https://wa.me/22666292951",
     Icon: WhatsAppIcon,
     bg: "bg-accent",
     fg: "text-accent-foreground",
@@ -42,6 +42,14 @@ const actions = [
     title: "WhatsApp",
     value: "+226 56 15 34 44",
     href: "https://wa.me/22656153444",
+    Icon: WhatsAppIcon,
+    bg: "bg-accent",
+    fg: "text-accent-foreground",
+  },
+  {
+    title: "WhatsApp",
+    value: "+226 65 43 85 85",
+    href: "https://wa.me/22665438585",
     Icon: WhatsAppIcon,
     bg: "bg-accent",
     fg: "text-accent-foreground",
@@ -132,7 +140,7 @@ function ContactPage() {
               <a href="https://www.tiktok.com/@.afterwork" target="_blank" rel="noreferrer" className="glass grid h-12 w-12 place-items-center rounded-full hover:bg-foreground/5"><TiktokLogo size={20} weight="fill" /></a>
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="glass grid h-12 w-12 place-items-center rounded-full hover:bg-foreground/5"><InstagramLogo size={20} weight="duotone" /></a>
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="glass grid h-12 w-12 place-items-center rounded-full hover:bg-foreground/5"><FacebookLogo size={20} weight="duotone" /></a>
-              <a href="https://wa.me/22665438585" target="_blank" rel="noreferrer" className="glass grid h-12 w-12 place-items-center rounded-full hover:bg-foreground/5"><WhatsAppIcon size={20}  /></a>
+              <a href="https://wa.me/22666292951" target="_blank" rel="noreferrer" className="glass grid h-12 w-12 place-items-center rounded-full hover:bg-foreground/5"><WhatsAppIcon size={20}  /></a>
             </div>
           </motion.div>
         </div>

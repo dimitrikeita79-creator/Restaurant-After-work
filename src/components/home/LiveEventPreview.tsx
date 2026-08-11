@@ -141,7 +141,7 @@ export function LiveEventPreview() {
                 <li>🕒 Mardi à jeudi : dès 17h.</li>
                 <li>🕓 Vendredi, samedi, dimanche : dès 16h.</li>
                 <li>🎶 Vendredi : coupé décalé, rétro, zouglou ou reggae en live.</li>
-                <li>📱 WhatsApp : +226 65 43 85 85 / +226 56 15 34 44.</li>
+                <li>📱 WhatsApp : +226 66 29 29 51 / +226 56 15 34 44 / +226 65 43 85 85.</li>
               </ul>
             </div>
 

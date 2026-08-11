@@ -38,7 +38,7 @@ export function ReservationForm() {
     const text = encodeURIComponent(
       `Réservation After Work\n\nNom: ${data.name}\nTéléphone: ${data.phone}\nType: ${data.type}\nDate: ${data.date} à ${data.time}\nPersonnes: ${data.guests}\n\n${data.message ?? ""}`,
     );
-    window.open(`https://wa.me/22665438585?text=${text}`, "_blank");
+    window.open(`https://wa.me/22666292951?text=${text}`, "_blank");
     await new Promise((r) => setTimeout(r, 600));
     setSubmitted(true);
     reset({ type: "Table", guests: 2 } as FormValues);

@@ -81,12 +81,12 @@ export function Footer() {
               </li>
               <li className="flex justify-center md:justify-start">
                 <a
-                  href="https://wa.me/22665438585"
+                  href="https://wa.me/22666292951"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 hover:text-accent"
                 >
-                  <WhatsAppIcon size={16} /> +226 65 43 85 85
+                  <WhatsAppIcon size={16} /> +226 66 29 29 51
                 </a>
               </li>
             </ul>

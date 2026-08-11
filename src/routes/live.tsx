@@ -74,8 +74,9 @@ function LivePage() {
                 </div>
                 <div className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
                   <p className="text-sm font-semibold text-white">Contact</p>
-                  <p className="mt-3 text-slate-100">WhatsApp : +226 65 43 85 85</p>
+                  <p className="mt-3 text-slate-100">WhatsApp : +226 66 29 29 51</p>
                   <p className="text-slate-100">WhatsApp : +226 56 15 34 44</p>
+                  <p className="text-slate-100">WhatsApp : +226 65 43 85 85</p>
                 </div>
               </div>
 

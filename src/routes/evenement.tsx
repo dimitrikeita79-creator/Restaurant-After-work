@@ -69,8 +69,9 @@ function EventPage() {
               <div className="grid gap-3 text-sm sm:grid-cols-2">
                 <div className="rounded-xl border border-red/10 bg-white/5 p-4">
                   <p className="text-sm font-semibold text-black">Renseignements</p>
-                  <p className="mt-3 text-black-300">WhatsApp : +226 65 43 85 85</p>
+                  <p className="mt-3 text-black-300">WhatsApp : +226 66 29 29 51</p>
                   <p className="text-black-300">WhatsApp : +226 56 15 34 44</p>
+                  <p className="text-black-300">WhatsApp : +226 65 43 85 85</p>
                 </div>
                 <div className="rounded-xl border border-red/10 bg-white/5 p-4">
                   <p className="text-sm font-semibold text-black">Horaires</p>

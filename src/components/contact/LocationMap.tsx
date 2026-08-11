@@ -55,12 +55,12 @@ export function LocationMap() {
               <Phone size={14} /> +226 06 44 44 64
             </a>
             <a
-              href="https://wa.me/22665438585"
+              href="https://wa.me/22666292951"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 hover:text-accent"
             >
-              <WhatsAppIcon size={14} /> +226 65 43 85 85
+              <WhatsAppIcon size={14} /> +226 66 29 29 51
             </a>
           </div>
         </div>
